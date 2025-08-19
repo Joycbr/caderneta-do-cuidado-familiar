@@ -1,0 +1,24 @@
+// filepath: /workspaces/caderneta-do-cuidado-familiar/src/App.js
+import React from 'react';
+
+const paginas = [
+    '/imagens/pagina1.jpg',
+    '/imagens/pagina2.jpg',
+    // Adicione mais páginas aqui
+];
+
+function App() {
+    return (
+        <div>
+            <h1>Caderneta de Cuidado Familiar</h1>
+            {paginas.map((pagina, index) => (
+                <div key={index}>
+                    <h2>Página {index + 1}</h2>
+                    <img src={pagina} alt={`Página ${index + 1}`} style={{ width: '100%', maxWidth: '600px' }} />
+                </div>
+            ))}
+        </div>
+    );
+}
+
+export default App;
